@@ -6,7 +6,6 @@ pipeline {
     triggers {
   pollSCM '* * * * *'
 }
-
     triggers {
   pollSCM('* * * * *')
     }
@@ -21,11 +20,6 @@ pipeline {
           stage('test') {
             steps {
                 sh 'mvn test'
-            }
-        }
-          stage('deploy') {
-            steps {
-                echo 'deploy'
             }
         }
           stage('deploy') {
