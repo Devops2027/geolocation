@@ -4,26 +4,28 @@ pipeline {
   pollSCM('* * * * *')
     }
     stages {
-        stage('build') {
+        stage('Hello') {
             steps {
-                echo 'build '
+                echo 'Hello '
+                
             }
         }
-          stage('maven package') {
+          stage('build') {
             steps {
-                echo 'mvn clean'
-                echo 'mvn install'
-                echo 'mvn package'
+                echo 'build'
+                
             }
         }
           stage('test') {
             steps {
                 echo 'test'
+                
             }
         }
           stage('deploy') {
             steps {
                 echo 'deploy'
+                
             }
         }
     }
